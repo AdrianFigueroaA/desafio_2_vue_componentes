@@ -3,13 +3,11 @@
   <div id="app" > 
     <input v-model="tarea" type="text" autofocus @keyup.enter="agregar"/>
     <button @click="agregar">Agregar tarea</button>
-    <Tarea
-      v-for="(tarea, i) in tareas "
-      :tarea="tarea"
-      :indice="i"
-      :key="i"
-      @eliminar="eliminar"
-    ></Tarea>
+
+    <div class="tareaAgregada" >
+<Tarea v-for="(tarea, i) in tareas " :tarea="tarea":indice="i":key="i" @eliminar="eliminar"></Tarea>
+    </div>
+    
   </div>
 
 </template>
@@ -44,6 +42,17 @@ export default {
 
 <style lang="scss">
 
+input{
+
+  height: 35px;
+}
+
+button{
+
+  height: 35px;
+  margin: 15px;
+}
+
 body{
 
   background: green;
@@ -56,6 +65,21 @@ text-align: center;
 }
 #app {
   text-align: center;
+}
+
+.tareaAgregada{
+
+
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+
+.vaciar{
+  border: 2px solid black;
+  background: red;
+  width: 500px;
+  margin: auto;
 }
 </style>
 

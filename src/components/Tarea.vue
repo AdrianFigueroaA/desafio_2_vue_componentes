@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  class="vaciar">
     {{tarea}}
     <button @click="vaciar">Eliminar tarea</button>
   </div>
@@ -19,3 +19,6 @@ name: "Tarea",
   },
 };
 </script>
+
+
+
